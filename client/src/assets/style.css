@@ -1,0 +1,54 @@
+@font-face {
+  font-family: 'asteroidhazard';
+  src:  url('fonts/asteroidhazard.eot?z14y8q');
+  src:  url('fonts/asteroidhazard.eot?z14y8q#iefix') format('embedded-opentype'),
+    url('fonts/asteroidhazard.ttf?z14y8q') format('truetype'),
+    url('fonts/asteroidhazard.woff?z14y8q') format('woff'),
+    url('fonts/asteroidhazard.svg?z14y8q#asteroidhazard') format('svg');
+  font-weight: normal;
+  font-style: normal;
+  font-display: block;
+}
+
+[class^="ah-"], [class*=" ah-"] {
+  /* use !important to prevent issues with browser extensions that change fonts */
+  font-family: 'asteroidhazard' !important;
+  speak: never;
+  font-style: normal;
+  font-weight: normal;
+  font-variant: normal;
+  text-transform: none;
+  line-height: 1;
+
+  /* Better Font Rendering =========== */
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+.ah-shockwave:before {
+  content: "\e904";
+}
+.ah-seismic:before {
+  content: "\e90b";
+}
+.ah-agw:before {
+  content: "\e901";
+}
+.ah-ejecta:before {
+  content: "\e909";
+}
+.ah-crater:before {
+  content: "\e90a";
+}
+.ah-globe:before {
+  content: "\e900";
+}
+.ah-meteoroid:before {
+  content: "\e902";
+}
+.ah-fire:before {
+  content: "\e9a9";
+}
+.ah-fire-2:before {
+  content: "\e903";
+}

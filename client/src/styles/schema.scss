@@ -1,0 +1,144 @@
+.tooltip_wrapper{
+    display: none;
+    &.active {
+        display: flex;
+    }
+
+    &.top{
+        top:-24px;
+        transform: translate(0px, -100%);
+    }
+    &.bottom{
+        bottom:-24px;
+        transform: translate(0px, 100%);
+    }
+    position:absolute; 
+    left: -100px;
+    margin-left: auto;
+    margin-right: auto;
+    width: 200px;
+    text-align: center;
+    
+    
+    flex-direction: row;
+    justify-content:center;
+
+    .tooltip_back{
+        background:rgba(97,97,97,.9);
+        border-radius: 4px;
+        color: #fff;
+        font-size: 14px;
+        line-height: 22px;
+        padding: 5px 16px;
+        position: relative;
+    }
+}
+
+svg{
+    .marker_figure{
+      
+        text.icon {
+            font-family: 'asteroidhazard' !important;
+            font-style: normal;
+            font-weight: normal;
+            font-variant: normal;
+            text-transform: none;
+            line-height: 1;
+            -webkit-font-smoothing: antialiased;
+            font-size: 24px;
+        }
+    }
+
+    .meteoroid {
+        --marker_stroke: rgba(255, 255, 255, 0);
+        --marker_back: rgba(255, 255, 255, 1);
+        --icon_color: rgb(150, 150, 150);
+    }
+    
+    &.map{
+        background-color: rgb(0, 83, 38);
+        .sizes_line{
+            stroke:rgba(200, 200, 200, 1);
+        }
+        .effects_group{
+            .sizes_line{
+                stroke:rgba(200, 200, 200, 1);
+            }
+            .use_marker{
+                --marker_stroke: rgb(200, 200, 200,1);
+                --marker_back: rgb(86, 86, 86, 1);
+                --icon_color: rgb(255, 255, 255);
+            }
+            &:hover{
+                .sizes_line{
+                    stroke:rgba(255, 255, 255, 1);
+                }
+                .use_marker{
+                    --marker_stroke: rgba(255, 255, 255, 1) !important;                    
+                    --marker_back: rgba(150, 150, 150, 1)!important;
+                    --icon_color: rgb(255, 255, 255)!important;
+                }
+            }
+        }
+        
+    }
+
+
+    .effects_group{
+        cursor: pointer;
+        &.hover_shadow{
+            opacity: 0;
+            &:hover{
+                opacity: 1;
+            }
+        }
+        &.hover_shadow_back{
+            opacity: 1;
+            &:hover{
+                opacity: 0;
+            }
+        }
+
+        .sizes_line{
+            stroke:rgb(240, 240, 240,0);
+        }
+        .use_marker{
+            --marker_stroke: rgba(255, 255, 255, 0);
+            --marker_back: rgba(255, 255, 255, 0.5);
+            --icon_color: rgb(150, 150, 150);
+        }
+        &.selected,
+        &.selected:hover{                 
+            .sizes_line{
+            stroke:#1976d2;
+            }
+            .use_marker{
+                --marker_stroke: #1976d2;
+                --marker_back: rgba(255, 255, 255, 1);
+                --icon_color: #1976d2;
+            }
+        }
+
+
+        &:hover{
+            .sizes_line{
+                stroke:rgba(128, 128, 128, 1);
+            }
+            .use_marker{
+                --marker_stroke: rgba(128, 128, 128, 1);                    
+                --marker_back: rgba(255, 255, 255, 1);
+                --icon_color: rgba(128, 128, 128, 1);
+            }
+        }
+    }
+
+
+     .selected {
+            --marker_back: #d3d3d32d;
+            --marker_stroke: red;
+            --icon_color: red;
+    }
+
+
+    
+}
