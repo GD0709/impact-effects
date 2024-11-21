@@ -1,0 +1,1 @@
+# Impcat Effect Calculator
