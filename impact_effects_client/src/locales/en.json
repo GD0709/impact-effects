@@ -1,0 +1,264 @@
+{
+  "message": "hello i18n !!",
+  "old version": "Old version",  
+  "under construction": "under construction",
+  "system":{
+    "close_text":"close"
+  },
+  "footer":{
+    "navigation": "Navigation",
+    "about":"About",
+    "calculator": "Calculator",
+    "articles": "Articles",
+    "footer_text": "Impact Effects Calculator",
+    "organization":"Institute of Geosphere Dynamics Russian Academy of Sciences (IDG RAS)",
+    "email": "Email us"
+  },
+  "home":{
+    "intro_1":"Comprehensive assessment of hazardous effects caused by impacts of cosmic bodies",
+    "intro_2":"web-based calculator easy to use",
+    "intro_3":"Estimation of air-blast and radiation effects, crater and ejecta, seismic effect and atmospheric disturbances",
+    "intro_4":"asteroids and comets: diameter from 15 m to 3 km; velocity from 10 to 72 km/s",
+    "intro_5":"Calculator applies the scaling relations based on the serial numerical simulation results of large number of different scenarios",
+    "start_button": "get started"
+  },
+  "calculator":{
+    "headers":{
+      "Projectile parameters": "Projectile parameters",
+      "Entry parameters": "Entry parameters",
+      "Observation point": "Observation point",
+      "Entry vector": "Entry vector",
+      "Target parameters": "Target parameters",
+      "basic":"basic",
+      "extended":"advanced"
+    },
+    "input_summary":{
+      "title":"input summary",
+      "energy": "Energy",
+      "energy_tnt": "Energy (TNT)"
+    },
+    "dimensions": {
+      "s": "s",
+      "m": "m",
+      "km": "km",
+      "kg/m3":"kg/m<sup>3</sup>",        
+      "km/s":"km/s",
+      "m/s": "m/s",
+      "cm/s": "cm/s",
+      "cm/s2": "cm/s<sup>2</sup>",
+      "degree": "°",
+      "atm": "atm",
+      "kPa": "kPa",
+      "Pa": "Pa",
+      "km2": "km<sup>2</sup>",
+      "km3": "km<sup>3</sup>",
+      "J": "J",
+      "J/cm2": "J/cm<sup>2</sup>",
+      "W/cm2": "W/cm<sup>2</sup>",
+      "t tnt": "t TNT",
+      "prefix":{
+        "-15": "f",
+        "-12": "p",
+        "-9": "n",
+        "-6": "µ",
+        "-3": "m",
+        "0": "",
+        "3": "k",
+        "6": "M",
+        "9": "G",
+        "12": "T",
+        "15": "P",
+        "18": "E",
+        "21": "Z",
+        "24": "Y"
+      }
+    },
+
+    "inputs":{
+
+      "diameter": {
+        "label": "Diameter",
+        "help": "Projectile diameter (meters)"
+      },
+      "density": {
+        "label": "Density",
+        "help": "Density of cosmic body (kg/m<sup>3</sup>). It is assumed that asteroid density is in the range 2000-3320 kg/m<sup>3</sup>, cometary objects density is 500-1200 kg/m<sup>3</sup>"
+      },
+      "velocity": {
+        "label": "Velocity",
+        "help": "Projectile entry velocity is in the range from 12 to 72 km/s"
+      },
+      "entry angle": {
+        "label": "Entry angle",
+        "help": "The projectile entry angle (i.e., the angle to the Earth's surface). Setting it to 90° means that the projectile falls vertically."
+      },
+      "target type": {
+        "label": "Target Type",
+        "help": "The target type determines the properties of the surface on which the cosmic body hits.<br/>Density of a rock is 2650, sand: 1600 kg/m<sup>3</sup>",
+        "sand": "Sand",
+        "rock": "Crystalline rock"
+      },
+      "zero point": {
+        "label": "Zero Point",
+        "help": "",
+        "entry point 100km":"Entry point at 100km above the ground",
+        "max overpressure point":"Max overpressure point",
+        "surface intersection":"The point of intersection of the trajectory with the Earth's surface",
+        "max thermal effect point":"Max thermal effect point"
+      },
+      "entry vector": {
+        "latitude": "Latitude",
+        "longitude": "Longitude",
+        "help title": "Projectile Entry Point Coordinates",
+        "help": "The latitude and the longitude of the projectile entry point. <br/> Both latitude and longitude are measured in degrees. Latitude ranges from -90° to 90°. Longitude ranges from -180° to 180°.",
+        "azimuth": "Azimuth",
+        "azimuth help":""
+      },
+      "observation point": {
+        "along across":{
+          "label": "along-across",
+          "along": "Distance along",
+          "along help title": "Distance Along the Trajectory Projection",
+          "along help": "L<sub>y</sub> The distance along the trajectory from the zero point to the point of intersection with the perpendicular drawn from the observation point to the projection of the trajectory",
+          "across": "Distance across",
+          "across help title": "Distance Across  the Trajectory Projection",
+          "across help": "L<sub>x</sub> The length of the perpendicular drawn from the observation point to the projection of the trajectory of the cosmic body"
+        },
+        "distance angle":{
+          "label": "distance-angle",
+          "distance": "Distance to zero point",
+          "distance help title": "Distance to the Zero Point, L",
+          "distance help": "The distance between the point of effect and the zero point (L)",
+          "angle": "Angle to trajectory projection",
+          "angle help title": "Angle to Trajectory Projection, 𝜓",
+          "angle help": "The angle between the direction from the observation point to the zero point and the projection of the trajectory on the surface of the Earth (𝜓)",
+          "distance by zeropoint":{
+            "entry point 100km": {
+              "distance":"Distance to the intersection point",
+              "help title": "Observation point distance",
+              "help":"The distance between the point of effect and the point of intersection of the trajectory with the Earth's surface" 
+              }
+          }
+        },
+        "latitude longitude":{
+          "label": "latitude-longitude",
+          "latitude": "Latitude",
+          "longitude": "Longitude",
+
+          "help title": "Latitude and Longitude of the Zero Point",
+          "help": "The latitude and the longitude of the zero point.<br/>Both latitude and longitude are measured in degrees. Latitude ranges from -90° to 90°. Longitude ranges from -180° to 180°.",
+          "coordinates": "Coordinates"
+        }
+
+      }
+      
+    },
+
+
+    "results": {
+      "title": "results",
+      "common":{
+        "at": "at"
+      },
+      "shockwave": {
+        "Airblast wave": "Airblast wave",
+        "Overpressure": "Overpressure",
+        "description": "Numerical simulations of a shock wave from the cosmic object impact provide possibility to suggest scaling relations for a value of maximal overpressure and its distribution on the surface, for maximal wind velocity behind the front and for a squares, where overpressure is larger than a fixed levelall values are determined based only on the properties of the impactor",
+        "Effective altitude": "Effective altitude",
+        "Distance to the center": "Distance to the center of a overpressure field from the point of intersection of the trajectory with the Earth`s surface",
+        "Maximal overpressure": "Maximal overpressure",
+        "Areas": "Areas, at which chosen levels of overpressure exceed",
+        "The value of the overpressure":"The value of the overpressure in the point of observation",
+        "Maximum wind speed":"Maximum wind speed behind the shock front in the point of observation",
+        "info":{
+          "Effective altitude": {
+            "header":"The effective altitude",
+            "body": "The effective height Heff is the height at which the impactor loses most of its energy and slows down significantly, which makes it possible to determine the boundary between different scenarios (meteor explosion, transitional variant or crater-forming impact). As a first approximation, the overpressure in the shock wave from the falling cosmic body can be estimated by considering the explosion at the altitude Heff, the energy of which is determined by the energy of the falling body."
+          }
+        }
+      },
+      "irradiation":{
+        "Irradiation": "Irradiation",
+        "Thermal exposure": "Maximal thermal exposure",
+        "description": "One of the main hazardous effects of the cosmic body impacts",
+        "Maximal thermal exposure":"Maximal thermal exposure",
+        "Maximal irradiation flux":"Maximal thermal flux",
+        "Radiation altitude":"Radiation altitude",
+        "Radiation pulse duration":"Radiation pulse duration",
+        "Radiation efficiency":"Radiation efficiency",
+        "Distance to the center":"Distance to the center of a radiation field from the point of intersection of the trajectory with the Earth`s surface",
+
+        "Thermal exposure in the point of observation":"Maximal thermal exposure in the point of observation",
+        "Thermal flux in the point of observation":"Maximal thermal flux in the point of observation"
+
+      },
+      "crater": {
+        "Crater": "Crater",
+        "no crater": "No crater",
+        "Crater forming event": "Crater forming event",
+        "transient":{
+          "Transient crater parameters": "Transient crater parameters",
+          "description":"Diameter and depth of a crater, which are set at the end of excavation stage, measured in relation to the level of the original surface",
+          "Transient crater size":"Transient crater size",
+          "Transient crater depth":"Transient crater depth"
+        },
+        "final":{
+          "Final crater parameters": "Final crater parameters",
+          "description":"Final crater parameters are defined based on transient crater size.Also, final crater size and depth depend on its type (simple or complex).Simple called craters with final size less than 3 km in diameter (2.56km for corresponding transient diameter), complex – with final diameter more than 3 km (transient crater size more than 2.56 km).",
+          "Final crater diameter":"Final crater diameter",
+          "Depth of a final crater":"Depth of a final crater",
+          "Crater type": "Crater type",
+          "simple": "simple",
+          "complex": "complex"
+        },
+        "melt":{
+          "Melt target material in the crater counting":"Melt target material in the crater counting",
+          "description":"Breccia lens thickness (for simple crater) and thickness and volume of the melt layer",
+          "Thickness of a breccia lens":"Thickness of a breccia lens",
+          "Melt volume":"Melt volume",
+          "Melt thickness":"Melt thickness"
+        }
+      },
+      "ejecta": {
+        "Ejecta": "Ejecta",
+        "no ejecta": "No ejecta",
+        "Ejecta forming event": "Ejecta forming event",
+        "description":"Target and projectile material excavated from the crater is called ejecta. Ejected particles land around the crater forming ejecta deposit or ejecta blanket. A thickness of ejecta blanket is the greatest at the crater rim and decreases with distance from the crater. At high distances ejecta become patchy. We give an average thickness of the ejecta blanket and a thickness melted part of the ejecta blanket.",
+        "Thickness of ejecta blanket": "Thickness of ejecta blanket in the observational point",
+        "Fraction of melt in ejecta": "Fraction of melt in ejecta in the observational point"
+      },
+      "seismic": {
+        "Seismic effect": "Seismic effect",
+        "description": "The seismic magnitude of the impact event is estimated for bothcrater forming impacts and aerial bursts.The magnitude is used for determination of the instrumental characteristics of a seismic disturbance in the observational point.",
+        "Magnitude": "Magnitude",
+        "Richter scale magnitude of the impact event":"Richter scale magnitude of the impact event",
+        "Mercally scale intensity":"Mercally scale intensity",
+        "The peak ground velocity":"The peak ground velocity",
+        "The peak ground acceleration":"The peak ground acceleration",
+        "Time of arrival to the observation point":"Time of arrival to the observation point (started from moment of maximal energy deposition)"
+      },
+      "atmospheric_disturbances": {
+        "Atmospheric disturbances": "Atmospheric disturbances",
+        "description": "Atmospheric plume resulting from impact rises to high altitudes and generates atmospheric disturbances expanding to distances up to thousands of kilometres. To estimate these disturbances we consider deviations of air density from average value at an altitude of 300 km and deviations of temperature from equilibrium value at an altitude of 100 km.",
+        "Peak amplitude of relative density oscillations at an altitude of 300 km":"Peak amplitude of relative density oscillations at an altitude of 300 km",
+        "Peak amplitude of relative temperature oscillations at an altitude of 100 km":"Peak amplitude of relative temperature oscillations at an altitude of 100 km"
+      }
+    },
+    
+    "schema":{
+      "Entry point": "Entry point at 100km above the ground",
+      "Entry direction": "Direction from entry point at 100km above the ground",
+      "Surface intersection point": "The point of intersection of the trajectory with the Earth's surface",
+      "Effective thermal point source":"Position of effective thermal point source",
+      "Effective overpressure point source": "Position of effective overpressure point source",
+      "Observation point": "Observation point",
+      "yaxe":  "Altitude, km",
+      "xaxe": "Distance Along the Trajectory Projection, km",
+      "legend": "Legend:"
+    }
+  },
+
+  "articles":{
+    "articles": "articles"
+  }
+}
