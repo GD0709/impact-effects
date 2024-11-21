@@ -1,0 +1,25 @@
+.calculator
+{
+    display: flex;
+    flex-direction: column;
+    justify-content: stretch;
+    .tab_input_mode_switcher_placer{
+        display: flex;
+        flex-direction: row;
+        justify-content: center;
+    }
+    .tab_input_mode_switcher {
+        max-width: 400px;
+        display: flex;
+        flex-grow: 1;
+    }
+    .radio_with_label{
+        margin-top: 0px;
+    }
+    .radio_label{
+            font-size: 12px;
+            height: 20px;
+            line-height: 20px;
+            color: rgb(0, 0, 0,0.6);
+    }
+}

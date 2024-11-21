@@ -1,0 +1,25 @@
+.calculator_input{
+
+    .v-input__details
+    {
+        overflow: visible;
+        .v-messages__message{
+            white-space: nowrap;
+        }
+    }
+    .v-field-label{
+        text-overflow: clip;
+        overflow: visible;
+    }
+}
+.italic_prefix .v-text-field__prefix{
+    font-style: italic;
+}
+
+.no-gutters {
+    padding: 0px;
+}
+
+.text-primary input {
+    //color: #3f51b5 !important;
+}
