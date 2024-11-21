@@ -2,6 +2,7 @@
   <v-app>
     <v-main>
       {{$t("footer.organization")}}
+      <RouterView/>
       <HelloWorld />
     </v-main>
   </v-app>
