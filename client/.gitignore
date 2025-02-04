@@ -1,7 +1,11 @@
 .DS_Store
 node_modules
+<<<<<<< HEAD
 
 
+=======
+/dist
+>>>>>>> 6505564 (add core)
 
 # local env files
 .env.local
@@ -21,5 +25,8 @@ pnpm-debug.log*
 *.njsproj
 *.sln
 *.sw?
+<<<<<<< HEAD
 
 dist
+=======
+>>>>>>> 6505564 (add core)
