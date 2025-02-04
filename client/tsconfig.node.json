@@ -5,8 +5,7 @@
     "vitest.config.*",
     "cypress.config.*",
     "nightwatch.conf.*",
-    "playwright.config.*",
-    "typed-router.d.ts"
+    "playwright.config.*"
   ],
   "compilerOptions": {
     "composite": true,
@@ -15,6 +14,6 @@
 
     "module": "ESNext",
     "moduleResolution": "Bundler",
-    "types": ["node", "unplugin-vue-router/client"],
+    "types": ["node"]
   }
 }
