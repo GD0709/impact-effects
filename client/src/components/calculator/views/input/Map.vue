@@ -122,7 +122,7 @@
 import State from './../../../../model/state';
 
 
-import { YMapMarkerProps } from '@yandex/ymaps3-types/imperative/YMapMarker';
+import type { YMapMarkerProps } from '@yandex/ymaps3-types/imperative/YMapMarker';
 import type { YMapLocationRequest } from '@yandex/ymaps3-types/imperative/YMap';
 
 
@@ -143,7 +143,7 @@ const props = withDefaults(defineProps<Props>(), {
 const theme = "dark"
 
 // -- map
-import { ShallowRef, shallowRef } from 'vue';
+import { type ShallowRef, shallowRef } from 'vue';
 import type { YMap } from '@yandex/ymaps3-types';
 
 import {
@@ -159,11 +159,10 @@ import {
   YandexMapListener
 } from 'vue-yandex-maps';
 import type { YandexMapMarkerPosition } from 'vue-yandex-maps';
-import { onMounted, onUnmounted, ref, Ref, triggerRef } from 'vue';
+import { onMounted, onUnmounted, ref, triggerRef } from 'vue';
 import type { LngLat } from '@yandex/ymaps3-types';
 import type { YMapDefaultMarker } from '@yandex/ymaps3-types/packages/markers';
-import { IGeoPoint } from '../../../../../../core/model/Geometry';
-import { LatLon } from 'geodesy/utm';
+import type { IGeoPoint } from '../../../../../../core/model/Geometry';
 
 import type { BehaviorMapEventHandler, BehaviorType, DomEvent } from '@yandex/ymaps3-types';
 const BEHAVIOR: BehaviorType[] = ['drag', 'scrollZoom', 'dblClick', 'mouseRotate', 'mouseTilt'];

@@ -1,4 +1,4 @@
-import { Emitter, IEmitter } from "../lib/Events";
+import { Emitter, type IEmitter } from "../lib/Events";
 
 export default class Target
 {
