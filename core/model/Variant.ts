@@ -1,4 +1,4 @@
-import { INotifyChanged, IEmitter, Emitter } from './../lib/Events';
+import { type INotifyChanged, type IEmitter, Emitter } from './../lib/Events';
 import ShockWaveEffects from './Effects/ShockWave';
 
 export default class Variant implements INotifyChanged<Variant> {

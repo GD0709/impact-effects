@@ -28,7 +28,22 @@
         <span class="mr-2">test</span>
         <v-icon>mdi-open-in-new</v-icon>
       </v-btn> -->
+      <v-btn v-if="t.locale.value == 'en'"
+        class="d-none d-sm-flex"
+        v-on:click="change_language('ru')"
+      >
+        <v-icon>mdi-translate</v-icon>
+        <span class="" style="margin-left: 8px;" >Русская версия</span>
+      </v-btn>
+      <v-btn v-if="t.locale.value == 'ru'"
+        class="d-none d-sm-flex"
+        v-on:click="change_language('en')"
+      >
+        <v-icon>mdi-translate</v-icon>
+        <span class="" style="margin-left: 8px;">English version</span>
+      </v-btn>
     </v-app-bar>
+    <div>locale:    {{ t.locale.value }}</div>
     <!-- <HelloWorld/> -->
     <v-main>
       <router-view />
