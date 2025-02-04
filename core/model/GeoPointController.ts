@@ -1,5 +1,5 @@
 
-import { Emitter, IEmitter } from "../lib/Events";
+import { Emitter, type IEmitter } from "../lib/Events";
 import MathExt from "../lib/MathExt";
 import { GeoMath, GeoPoint, GeoVector, Point } from "./Geometry";
 import { ObservationPointDistanceAngle } from "./Observation";

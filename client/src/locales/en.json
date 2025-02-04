@@ -174,6 +174,22 @@
           "Effective altitude": {
             "header":"The effective altitude",
             "body": "The effective height Heff is the height at which the impactor loses most of its energy and slows down significantly, which makes it possible to determine the boundary between different scenarios (meteor explosion, transitional variant or crater-forming impact). As a first approximation, the overpressure in the shock wave from the falling cosmic body can be estimated by considering the explosion at the altitude Heff, the energy of which is determined by the energy of the falling body."
+          },
+          "Maximal overpressure": {
+            "header":"Максимальное избыточное давление",
+            "body": "Максимальное избыточное давление в атм и Па в точке максимального эффекта"
+          },
+          "Distance to the center": {
+            "header":"Расстояние до центра распределения",
+            "body": "Расстояние до усредненного центра распределения избыточного давления от точки пересечения траектории с поверхностью Земли. Детально рассматривается в статье:"
+          },
+          "The value of the overpressure": {
+            "header":"Избыточное давление",
+            "body": "Максимальное избыточное давление за фронтом ударной волны регистрируемое в точке наблюдения"
+          },
+          "Maximum wind speed": {
+            "header":"Скорость ветра",
+            "body": "Максимальная скорость ветра за фронтом ударной волны регистрируемая в точке наблюдения"
           }
         }
       },

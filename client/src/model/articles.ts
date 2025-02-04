@@ -1,3 +1,4 @@
+
 class Author {
     constructor(    
         last_name?: string,
@@ -129,7 +130,14 @@ var publications:  Record<number, Publication> = {
     23: new Publication(23, [Svettsov, Shuvalov], "2019", "Thermal Radiation from Impact Plumes", "Meteoritics and Planetary Science", "54(1), 126-141"),
     24: new Publication(24, [Shuvalov, Popova, Svettsov, Trubetskaya, Glazachev], "2016", "Determination of the height of the \"meteoric explosion\"", "Solar System Research", "50(1), 1-12")
         .add_link("eLIBRARY", "https://elibrary.ru/item.asp?id=26930802", "26930802")
-        .add_link("DOI", "https://doi.org/10.1134/S0038094616010056", "10.1134/S0038094616010056")
+        .add_link("DOI", "https://doi.org/10.1134/S0038094616010056", "10.1134/S0038094616010056"),
+    25: new Publication(25, [Glazachev, Popova, Podobnaya, Artemieva, Shuvalov, Svettsov], "2021", "Shock Wave Effects from the Impacts of Cosmic Objects with Diameters from 20 m to 3 km", "Izvestiya, Physics of the Solid Earth", "Vol. 57, No. 5. – P. 698-709.")
+        .add_link("eLIBRARY", "https://www.elibrary.ru/item.asp?id=47524149", "47524149")
+        .add_link("DOI", "https://doi.org/10.1134/S1069351321050050", "10.1134/S1069351321050050"),
+    26: new Publication(26, [Glazachev, Popova, Podobnaya, Shuvalov, Artemieva, Svettsov], "2021", "Местоположение центра \"метеорного взрыва\"", "Динамические процессы в геосферах.", "№ 13. – С. 98-107. ")
+        .add_link("eLIBRARY", "https://www.elibrary.ru/item.asp?id=47474630", "47474630")
+        .add_link("DOI", "https://doi.org/10.26006/22228535_2021_1_98", "10.26006/22228535_2021_1_98"),
+        
 };
 
 
