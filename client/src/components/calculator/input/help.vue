@@ -1,5 +1,5 @@
 <template>
-  <v-btn icon="mdi-help-circle-outline" size="small" variant="text" color="primary" @click="dialog = true" style="margin-top: -14px; margin-bottom: -10px;"></v-btn>
+  <v-btn icon="mdi-information-outline" size="small" variant="text" color="primary" @click="dialog = true" style="margin-top: -14px; margin-bottom: -10px;"></v-btn>
   <v-dialog
       v-model="dialog"
       width="auto"
