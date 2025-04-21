@@ -9,15 +9,36 @@
 
                 <div class="results_description" v-html="$t('calculator.results.atmospheric_disturbances.description')"></div>
                 
-                <div class="result_effect">
+
+                <!-- <div class="result_effect">
                     <span class="results_effects_name">{{$t('calculator.results.atmospheric_disturbances.Peak amplitude of relative temperature oscillations at an altitude of 100 km')}}:&nbsp;</span>
                     <span v-html="$format.round(atmospheric_disturbances.peak_amplitude_of_relative_temperature_oscillations_at_an_altitude_of_100_km, null)"/>
-                </div>
+                </div> -->
                 <div class="result_effect">
+                    <help :help_title="$t('calculator.results.atmospheric_disturbances.info.Peak amplitude of relative temperature oscillations at an altitude of 100 km.header')">
+                        <div>{{ $t('calculator.results.atmospheric_disturbances.info.Peak amplitude of relative temperature oscillations at an altitude of 100 km.body') }}</div>
+                        <!-- <Publication :publication="publications[24]" :large="true" :links="true"
+                            style="margin-top: 16px;"/> -->
+                    </help>
+                    <span class="results_effects_name">{{$t('calculator.results.atmospheric_disturbances.Peak amplitude of relative temperature oscillations at an altitude of 100 km')}}:</span>
+                    <span v-html="$format.round(atmospheric_disturbances.peak_amplitude_of_relative_temperature_oscillations_at_an_altitude_of_100_km, null)"/>
+                </div>
+
+
+
+                <!-- <div class="result_effect">
                     <span class="results_effects_name">{{$t('calculator.results.atmospheric_disturbances.Peak amplitude of relative density oscillations at an altitude of 300 km')}}:&nbsp;</span>
                     <span v-html="$format.round(atmospheric_disturbances.peak_amplitude_of_relative_density_oscillations_at_an_altitude_of_300_km, null)"/>
-                </div>    
-
+                </div>     -->
+                <div class="result_effect">
+                    <help :help_title="$t('calculator.results.atmospheric_disturbances.info.Peak amplitude of relative density oscillations at an altitude of 300 km.header')">
+                        <div>{{ $t('calculator.results.atmospheric_disturbances.info.Peak amplitude of relative density oscillations at an altitude of 300 km.body') }}</div>
+                        <!-- <Publication :publication="publications[24]" :large="true" :links="true"
+                            style="margin-top: 16px;"/> -->
+                    </help>
+                    <span class="results_effects_name">{{$t('calculator.results.atmospheric_disturbances.Peak amplitude of relative density oscillations at an altitude of 300 km')}}:</span>
+                    <span v-html="$format.round(atmospheric_disturbances.peak_amplitude_of_relative_density_oscillations_at_an_altitude_of_300_km, null)"/>
+                </div>
                 
 
 

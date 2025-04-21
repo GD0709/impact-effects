@@ -205,7 +205,45 @@
         "Distance to the center":"Distance to the center of a radiation field from the point of intersection of the trajectory with the Earth`s surface",
 
         "Thermal exposure in the point of observation":"Maximal thermal exposure in the point of observation",
-        "Thermal flux in the point of observation":"Maximal thermal flux in the point of observation"
+        "Thermal flux in the point of observation":"Maximal thermal flux in the point of observation",
+        "info": {
+          "Thermal exposure": {
+            "header":"Тепловое излучение",
+            "body":"Максимальная плотность тепловой энергии 𝑄(в Дж/см2), падающая на единичную площадку в указанной точке наблюдения, ориентированную на источник"
+          },
+          "Maximal thermal exposure": {
+            "header":"Максимальная плотность энергии излучения",
+            "body":"Максимальная плотность тепловой энергии 𝑄(в Дж/см2), падающая на единичную площадку, ориентированную на источник в эпицентре"
+          },
+          "Maximal irradiation flux": {
+            "header":"Максимальный поток излучения",
+            "body":"Максимальная поток излучения W(в Вт/см2), падающий на единичную площадку, ориентированную на источник в эпицентре"
+          },
+          "Radiation altitude": {
+            "header":"Эффективная радиационная высота",
+            "body":"Эффективная радиационная высота(в км). Это высота, на которой можно расположить эквивалентный точечный источник (с энергией равной энергии ударника), который вызывает примерно те же радиационные последствия на больших расстояниях."
+          },
+          "Radiation pulse duration": {
+            "header":"Длительность импульса излучения",
+            "body":"Длительность импульса излучения в секундах. Длительности радиационного импульса составляют от ~1 минуты при размере ударяющего тела 300 м до ~10 минут при размере 3 км."
+          },
+          "Radiation efficiency": {
+            "header":"Эффективность высвета",
+            "body":"Эффективность высвета - доля кинетической энергии тела переходящая в тепловое излучение в процентах"
+          },
+          "Distance to the center":{
+            "header":"Расстояние от эпицентра до точки пересечения траектории с поверхностью Земли",
+            "body":"Расстояние от эпицентра (точки где наблюдается максимальный эффект) до точки пересечения траектории с поверхностью Земли"
+          },
+          "Thermal exposure in the point of observation":{
+            "header":"Максимальное значение плотности энергии излучения",
+            "body":"Максимальное значение плотности энергии излучения, падающей на единичную площадку, ориентированную на источник в точке наблюдения"
+          },
+          "Thermal flux in the point of observation":{
+            "header":"Максимальное значение радиационного потока",
+            "body":"Максимальное значение радиационного потока, падающего на единичную площадку, ориентированную на источник в точке наблюдения"
+          }
+        }
 
       },
       "crater": {
@@ -251,13 +289,45 @@
         "Mercally scale intensity":"Mercally scale intensity",
         "The peak ground velocity":"The peak ground velocity",
         "The peak ground acceleration":"The peak ground acceleration",
-        "Time of arrival to the observation point":"Time of arrival to the observation point (started from moment of maximal energy deposition)"
+        "Time of arrival to the observation point":"Time of arrival to the observation point (started from moment of maximal energy deposition)",
+        "info": {
+          "Richter scale magnitude of the impact event": {
+            "header":"Richter scale magnitude of the impact event",
+            "body":"Richter scale magnitude is determined from Gutenberg–Richter’s l formula. The seismic efficiency coefficient equals 10^-5 for bodies less than 100 m (aerial burst) and 10^-3  for bodies large than 300 m (crater forming impact).  The interpolation is used in the intermediate size interval."
+          }, 
+          "Mercally scale intensity": {
+            "header":"Mercally scale intensity",
+            "body":"Mercally scale intensity at the observational point"
+          },
+          "The peak ground velocity": {
+            "header":"The peak ground velocity",
+            "body":"The peak ground velocity at the observational point"
+          }, 
+          "The peak ground acceleration": {
+            "header":"The peak ground acceleration",
+            "body":"The peak ground acceleration at the observational point"
+          },
+          "Time of arrival to the observation point": {
+            "header":"Arrival  time",
+            "body":"The time interval between impact and major seismic shaking at the observational point"
+          }
+        }
       },
       "atmospheric_disturbances": {
         "Atmospheric disturbances": "Atmospheric disturbances",
         "description": "Atmospheric plume resulting from impact rises to high altitudes and generates atmospheric disturbances expanding to distances up to thousands of kilometres. To estimate these disturbances we consider deviations of air density from average value at an altitude of 300 km and deviations of temperature from equilibrium value at an altitude of 100 km.",
         "Peak amplitude of relative density oscillations at an altitude of 300 km":"Peak amplitude of relative density oscillations at an altitude of 300 km",
-        "Peak amplitude of relative temperature oscillations at an altitude of 100 km":"Peak amplitude of relative temperature oscillations at an altitude of 100 km"
+        "Peak amplitude of relative temperature oscillations at an altitude of 100 km":"Peak amplitude of relative temperature oscillations at an altitude of 100 km",
+        "info":{
+          "Peak amplitude of relative density oscillations at an altitude of 300 km":{
+            "header":"Peak amplitude of relative density oscillations at an altitude of 300 km",
+            "body":"Peak amplitude of relative density oscillations (dimensionless) at an altitude of 300 km is defined as an all-time maximum of ((ϱ(t,x,y)-ϱ0))/ϱ0 ,  where ϱ0 is an undisturbed air density at an altitude of 300 km, ϱ(t,x,y) is air density at the moment t at an altitude 300 km in the point with coordinates (x,y)."
+          },
+          "Peak amplitude of relative temperature oscillations at an altitude of 100 km":{
+            "header":"Peak amplitude of relative temperature oscillations at an altitude of 100 km",
+            "body":"Peak amplitude of relative temperature oscillations (dimensionless) at an altitude of 100 km is defined as an all-time maximum of   ((T(t,x,y)-T0))/T0 , where T0 is an undisturbed air temperature at an altitude of 100 km, T(t,x,y) is air temperature at the moment t at an altitude 100 km in the point with coordinates (x,y)."
+          }
+        }
       }
     },
     

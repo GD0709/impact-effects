@@ -7,26 +7,85 @@
             <template v-slot:content>
                 <div class="results_description" v-html="$t('calculator.results.seismic.description')"></div>
                 
-                <div class="result_effect">
+                <!-- <div class="result_effect">
                     <span class="results_effects_name">{{$t('calculator.results.seismic.Richter scale magnitude of the impact event')}}:&nbsp;</span>
                     <span v-html="$format.round(seismic.richter_scale_magnitude, -1)"/>
-                </div>
+                </div> -->
                 <div class="result_effect">
+                    <help :help_title="$t('calculator.results.seismic.info.Richter scale magnitude of the impact event.header')">
+                        <div>{{ $t('calculator.results.seismic.info.Richter scale magnitude of the impact event.body') }}</div>
+                        <!-- <Publication :publication="publications[24]" :large="true" :links="true"
+                            style="margin-top: 16px;"/> -->
+                    </help>
+                    <span class="results_effects_name">{{$t('calculator.results.seismic.Richter scale magnitude of the impact event')}}:</span>
+                    <span v-html="$format.round(seismic.richter_scale_magnitude, -1)"/>
+                </div>
+
+
+
+                <!-- <div class="result_effect">
                     <span class="results_effects_name">{{$t('calculator.results.seismic.Mercally scale intensity')}}:&nbsp;</span>
                     <span v-html="Seismic.Ieff_to_string(seismic.mercally_scale_intensity)"/>
-                </div>
+                </div> -->
                 <div class="result_effect">
+                    <help :help_title="$t('calculator.results.seismic.info.Mercally scale intensity.header')">
+                        <div>{{ $t('calculator.results.seismic.info.Mercally scale intensity.body') }}</div>
+                        <!-- <Publication :publication="publications[24]" :large="true" :links="true"
+                            style="margin-top: 16px;"/> -->
+                    </help>
+                    <span class="results_effects_name">{{$t('calculator.results.seismic.Mercally scale intensity')}}:</span>
+                    <span v-html="Seismic.Ieff_to_string(seismic.mercally_scale_intensity)"/>
+                </div>
+
+
+
+                <!-- <div class="result_effect">
+                    <span class="results_effects_name">{{$t('calculator.results.seismic.The peak ground velocity')}}:</span>
+                    {{$format.round(seismic.PGV, null)}} <span v-html="$t('calculator.dimensions.cm/s')"/>
+                </div> -->
+                <div class="result_effect">
+                    <help :help_title="$t('calculator.results.seismic.info.The peak ground velocity.header')">
+                        <div>{{ $t('calculator.results.seismic.info.The peak ground velocity.body') }}</div>
+                        <!-- <Publication :publication="publications[24]" :large="true" :links="true"
+                            style="margin-top: 16px;"/> -->
+                    </help>
                     <span class="results_effects_name">{{$t('calculator.results.seismic.The peak ground velocity')}}:</span>
                     {{$format.round(seismic.PGV, null)}} <span v-html="$t('calculator.dimensions.cm/s')"/>
                 </div>
+
+
+
+
+                <!-- <div class="result_effect">
+                    <span class="results_effects_name">{{$t('calculator.results.seismic.The peak ground acceleration')}}:</span>
+                    {{$format.round(seismic.PGA, null)}} <span v-html="$t('calculator.dimensions.cm/s2')"/>
+                </div> -->
                 <div class="result_effect">
+                    <help :help_title="$t('calculator.results.seismic.info.The peak ground acceleration.header')">
+                        <div>{{ $t('calculator.results.seismic.info.The peak ground acceleration.body') }}</div>
+                        <!-- <Publication :publication="publications[24]" :large="true" :links="true"
+                            style="margin-top: 16px;"/> -->
+                    </help>
                     <span class="results_effects_name">{{$t('calculator.results.seismic.The peak ground acceleration')}}:</span>
                     {{$format.round(seismic.PGA, null)}} <span v-html="$t('calculator.dimensions.cm/s2')"/>
                 </div>
-                <div class="result_effect">
+
+
+
+
+                <!-- <div class="result_effect">
                     <span class="results_effects_name">{{$t('calculator.results.seismic.Time of arrival to the observation point')}}:</span>
                     {{$format.seconds_to_string(seismic.arrival_time, false)}}
-                </div>    
+                </div>     -->
+                <div class="result_effect">
+                    <help :help_title="$t('calculator.results.seismic.info.Time of arrival to the observation point.header')">
+                        <div>{{ $t('calculator.results.seismic.info.Time of arrival to the observation point.body') }}</div>
+                        <!-- <Publication :publication="publications[24]" :large="true" :links="true"
+                            style="margin-top: 16px;"/> -->
+                    </help>
+                    <span class="results_effects_name">{{$t('calculator.results.seismic.Time of arrival to the observation point')}}:</span>
+                    {{$format.seconds_to_string(seismic.arrival_time, false)}}
+                </div>
 
 
 
