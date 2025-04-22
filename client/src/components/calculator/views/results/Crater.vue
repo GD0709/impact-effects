@@ -1,12 +1,28 @@
 <template>
     <Expansion icon="ah-crater" :title="$t('calculator.results.crater.Crater')">
             <template v-slot:closed>
-                <span v-if="state.variant.diameter < crater.diameter_min">{{$t('calculator.results.crater.no crater')}}</span>
+                <span v-if="state.variant.diameter < crater.diameter_min">
+                    <!-- {{$t('calculator.results.crater.no crater')}} -->
+                    <div v-if="Number.isNaN(craterForTransients.transient_size)">{{$t('calculator.results.crater.no crater')}}</div>
+                </span>
                 <span v-if="state.variant.diameter >= crater.diameter_min">{{$t('calculator.results.crater.Crater forming event')}}</span>
             </template>
             <template v-slot:content>
                 <div v-if="state.variant.diameter < crater.diameter_min">
-                    {{$t('calculator.results.crater.no crater')}}
+                    <!-- {{$t('calculator.results.crater.no crater')}} -->
+                     <div v-if="!Number.isNaN(craterForTransients.transient_size)">
+                        <div class="result_effect">
+                            <span class="results_effects_name">{{$t('calculator.results.crater.transient.Transient crater size')}}:</span>
+                            {{$format.dimension_prefix_format(craterForTransients.transient_size)}}<span v-html="$t('calculator.dimensions.m')"/>
+                        </div>
+
+                        <div class="result_effect">
+                            <span class="results_effects_name">{{$t('calculator.results.crater.transient.Transient crater depth')}}:</span>
+                            {{$format.dimension_prefix_format(craterForTransients.transient_depth)}}<span v-html="$t('calculator.dimensions.m')"/>
+                        </div>
+
+                     </div>
+                     <div v-if="Number.isNaN(craterForTransients.transient_size)">{{$t('calculator.results.crater.no crater')}}</div>
                 </div>
                 <div v-if="state.variant.diameter >= crater.diameter_min" class="flex_col">
                     <h3>{{$t('calculator.results.crater.transient.Transient crater parameters')}}</h3>
@@ -76,6 +92,7 @@ import {ref, onMounted} from 'vue'
 
 let state = ref(State.state)
 let crater = ref(State.state.effects.crater)
+let craterForTransients = ref(State.state.effects.craterForTransients)
 
 onMounted(() => {
     state.value.effects.effects_updated.on((effects, passed)=> {

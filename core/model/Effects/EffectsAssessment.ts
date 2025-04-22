@@ -4,6 +4,7 @@ import { ObservationPointInput } from "../Observation";
 import Target from "../Target";
 import Variant from "../Variant";
 import { Crater } from "./Crater";
+import { CraterForTransients } from "./TransientCraterScaling";
 import RadiationEffects from "./Radiation";
 import Seismic from "./Seismic";
 import ShockWaveEffects from "./ShockWave";
@@ -110,6 +111,7 @@ class Effects {
     shock_wave: ShockWaveEffects = new ShockWaveEffects();
     irradiation: RadiationEffects = new RadiationEffects();
     crater: Crater = new Crater();
+    craterForTransients: CraterForTransients = new CraterForTransients();
     seismic: Seismic = new Seismic();
     atmospheric_disturbances: AtmosphericDisturbances = new AtmosphericDisturbances();
 
@@ -138,6 +140,7 @@ class Effects {
         this.shock_wave.calc_point(this.observation_point_input.main_point);
         this.irradiation.calc_point(this.observation_point_input.main_point);
         this.crater.calc_variant_target(this.variant, this.target);
+        this.craterForTransients.calc_variant_target(this.variant, this.target);
 
         this.observation_point_changed();
     }
@@ -145,6 +148,7 @@ class Effects {
     {        
         this.log('variant_and_target changed call effects for calc_variant_target');
         this.crater.calc_variant_target(this.variant, this.target);
+        this.craterForTransients.calc_variant_target(this.variant, this.target);
     }
     observation_point_changed()
     {
