@@ -1,0 +1,31 @@
+import { type IEmitter } from "./lib/Events";
+import { GeoPoint, GeoVector, Point } from "./Geometry";
+import Variant from "./Variant";
+declare class GeoPointController {
+    name: string;
+    variant: Variant;
+    entry_point_geo: GeoVector;
+    observation_point: Point;
+    entry_point: Point;
+    intersection_point_geo: GeoPoint;
+    observation_point_geo: GeoPoint;
+    max_overpressure_point_geo: GeoPoint;
+    max_thermal_effect_point_geo: GeoPoint;
+    private readonly on_observation_point_changed;
+    get observation_point_changed(): IEmitter<Point>;
+    fire_observation_point_changed(passed: string[]): void;
+    private readonly on_observation_geopoint_changed;
+    get observation_geopoint_changed(): IEmitter<GeoPoint>;
+    fire_observation_geopoint_changed(passed: string[]): void;
+    constructor(variant: Variant, entry_point_geo: GeoVector, observation_point: Point);
+    entry_point_recalc(): Promise<void>;
+    intersection_point_geo_recalc(passed: string[]): Promise<void>;
+    observation_point_geo_recalc(): Promise<void>;
+    max_overpressure_geopoint_recalc(distance: number): void;
+    max_thermal_effect_geopoint_recalc(distance: number): void;
+    last_setted_observation_point_geo: GeoPoint;
+    last_setted_observation_point: Point;
+    observation_point_recalc(passed: string[]): void;
+    static fix_quartile(angle_deg: number): number;
+}
+export { GeoPointController };

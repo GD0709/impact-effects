@@ -10,7 +10,7 @@
                 preserveAspectRatio="xMidYMid meet" viewBox="16 16 32 32" overflow="visible">
                 <g class="marker_figure">
                     <circle cx="16" cy="16" r="16" style="fill: var(--marker_back, #d3d3d32d); stroke: var(--marker_stroke, black);"></circle> 
-                    <text x="16" y="16" dy="0.33em" text-anchor="middle" class="icon"  stroke="none" fill="#ededed"
+                    <text x="16" y="16" dy="0.33em" text-anchor="middle" class="icon icon_font_family"  stroke="none" fill="#ededed"
                         style="fill: var(--icon_color, black);" v-html="marker.icon.code">
                     </text>
                 </g>
@@ -43,7 +43,7 @@
 
                 <!-- entry -->
                 <g class="effects_group hover_shadow_back" @mouseover="markers.entry.icon.tooltip = true" @mouseout="markers.entry.icon.tooltip = false">
-                    <use class="use_marker meteoroid" 
+                    <use class="icon_font_family use_marker meteoroid" 
                         height="16" width="16" xlink:href="#icon_entry" 
                         :x="markers.entry.map_cs.x" 
                         :y="-markers.entry.map_cs.y" 
@@ -52,13 +52,13 @@
 
                 <!-- intersection -->
                 <g class="effects_group hover_shadow_back" @mouseover="markers.intersection.icon.tooltip = true" @mouseout="markers.intersection.icon.tooltip = false">
-                    <use class="use_marker" :x="markers.intersection.map_cs.x" :y="- markers.intersection.map_cs.y" height="16" width="16" :xlink:href="'#icon_' + 'intersection'"></use> 
+                    <use class="icon_font_family use_marker" :x="markers.intersection.map_cs.x" :y="- markers.intersection.map_cs.y" height="16" width="16" :xlink:href="'#icon_' + 'intersection'"></use> 
                 </g>
 
                 <!-- radiation -->
                 <g class="effects_group hover_shadow_back" @mouseover="markers.irradiation.icon.tooltip = true" @mouseout="markers.irradiation.icon.tooltip = false">
   <!--                   <line class="sizes_line" :x1="irradiation_point.x" y1="0" :x2="irradiation_point.x" :y2="- top_axe_origin_y"></line>    --> 
-                    <use class="use_marker" :x="markers.irradiation.map_cs.x" :y="- markers.irradiation.map_cs.y" height="16" width="16" xlink:href="#icon_irradiation"></use> 
+                    <use class="icon_font_family use_marker" :x="markers.irradiation.map_cs.x" :y="- markers.irradiation.map_cs.y" height="16" width="16" xlink:href="#icon_irradiation"></use> 
                 </g>
 
 
@@ -66,7 +66,7 @@
                 <g class="effects_group hover_shadow_back" @mouseover="markers.overpressure.icon.tooltip = true" @mouseout="markers.overpressure.icon.tooltip = false">
                     <line class="sizes_line" :x1="markers.overpressure.map_cs.x" y1="0" :x2="markers.overpressure.map_cs.x" :y2="- top_axe_origin_y"></line>
                     <line class="sizes_line" :x1="0" :y1="-markers.overpressure.map_cs.y" :x2="200" :y2="- markers.overpressure.map_cs.y"></line>
-                    <use class="use_marker" :x="markers.overpressure.map_cs.x" :y="- markers.overpressure.map_cs.y" height="16" width="16" xlink:href="#icon_overpressure"></use>
+                    <use class="icon_font_family use_marker" :x="markers.overpressure.map_cs.x" :y="- markers.overpressure.map_cs.y" height="16" width="16" xlink:href="#icon_overpressure"></use>
                 </g>
 
 
@@ -147,7 +147,7 @@
                 <g class="effects_group hover_shadow" @mouseover="markers.entry.icon.tooltip = true" @mouseout="markers.entry.icon.tooltip = false">
 <!--                     <line class="sizes_line" :x1="markers.entry.map_cs.x" y1="0" :x2="markers.entry.map_cs.x" :y2="-top_axe_origin_y"></line> 
                     <line class="sizes_line" :x1="0" :y1="-markers.entry.map_cs.y" :x2="200" :y2="- markers.entry.map_cs.y"></line>    -->
-                    <use class="use_marker meteoroid" 
+                    <use class="icon_font_family use_marker meteoroid" 
                         height="16" width="16" xlink:href="#icon_entry" 
                         :x="markers.entry.map_cs.x" 
                         :y="-markers.entry.map_cs.y" 
@@ -159,19 +159,19 @@
                 <g class="effects_group hover_shadow"  @mouseover="markers.irradiation.icon.tooltip = true" @mouseout="markers.irradiation.icon.tooltip = false">
                     <line class="sizes_line" :x1="markers.irradiation.map_cs.x" y1="0" :x2="markers.irradiation.map_cs.x" :y2="-top_axe_origin_y"></line> 
                     <line class="sizes_line" :x1="0" :y1="-markers.irradiation.map_cs.y" :x2="200" :y2="- markers.irradiation.map_cs.y"></line>   
-                    <use class="use_marker" :x="markers.irradiation.map_cs.x" :y="- markers.irradiation.map_cs.y" height="16" width="16" xlink:href="#icon_irradiation"></use>
+                    <use class="icon_font_family use_marker" :x="markers.irradiation.map_cs.x" :y="- markers.irradiation.map_cs.y" height="16" width="16" xlink:href="#icon_irradiation"></use>
                 </g>
 
                 <!-- shock wave -->
                 <g class="effects_group hover_shadow" @mouseover="markers.overpressure.icon.tooltip = true" @mouseout="markers.overpressure.icon.tooltip = false">
                     <line class="sizes_line" :x1="markers.overpressure.map_cs.x" y1="0" :x2="markers.overpressure.map_cs.x" :y2="- top_axe_origin_y"></line>
                     <line class="sizes_line" :x1="0" :y1="-markers.overpressure.map_cs.y" :x2="200" :y2="- markers.overpressure.map_cs.y"></line>
-                    <use class="use_marker" :x="markers.overpressure.map_cs.x" :y="- markers.overpressure.map_cs.y" height="16" width="16" xlink:href="#icon_overpressure"></use>
+                    <use class="icon_font_family use_marker" :x="markers.overpressure.map_cs.x" :y="- markers.overpressure.map_cs.y" height="16" width="16" xlink:href="#icon_overpressure"></use>
                 </g>
                 
                 <!-- intersection -->
                 <g class="effects_group hover_shadow" @mouseover="markers.intersection.icon.tooltip = true" @mouseout="markers.intersection.icon.tooltip = false">
-                    <use class="use_marker" :x="markers.intersection.map_cs.x" :y="- markers.intersection.map_cs.y" height="16" width="16" :xlink:href="'#icon_' + 'intersection'"></use> 
+                    <use class="icon_font_family use_marker" :x="markers.intersection.map_cs.x" :y="- markers.intersection.map_cs.y" height="16" width="16" :xlink:href="'#icon_' + 'intersection'"></use> 
                 </g>
 
                 <foreignObject  v-for="(marker, name)  in markers" :key="'tooltip for ' + name"

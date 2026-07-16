@@ -1,0 +1,19 @@
+{
+  "name": "impact-effects-core",
+  "version": "2025.1.0",
+  "description": "",
+  "main": "dist/index.js",
+  "types": "dist/index.d.ts",
+  "scripts": {
+    "build": "tsc",
+    "prepare": "npm run build",
+    "prepublishOnly": "npm run build"
+  },
+  "author": "Glazachev Dmitry",
+  "license": "ISC",
+  "dependencies": {
+    "@types/geodesy": "^2.2.8",
+    "geodesy": "^2.4.0"
+  },
+  "files": ["dist"]
+}

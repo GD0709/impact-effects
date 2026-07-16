@@ -4,13 +4,25 @@
                 <span v-if="state.variant.diameter < crater.diameter_min">
                     <!-- {{$t('calculator.results.crater.no crater')}} -->
                     <div v-if="Number.isNaN(craterForTransients.transient_size)">{{$t('calculator.results.crater.no crater')}}</div>
+                    <div v-if="!Number.isNaN(craterForTransients.transient_size)">{{$t('calculator.results.crater.Crater forming event')}}</div>
                 </span>
                 <span v-if="state.variant.diameter >= crater.diameter_min">{{$t('calculator.results.crater.Crater forming event')}}</span>
             </template>
             <template v-slot:content>
+                <div  v-if="state.visual_settings.is_debug">
+                    <div>
+                        <span class="input_parameter_name">crater.diameter_min: </span>
+                        <span class="input_parameter_value">{{crater.diameter_min}}</span>
+                    </div>
+                
+                </div>
+
                 <div v-if="state.variant.diameter < crater.diameter_min">
                     <!-- {{$t('calculator.results.crater.no crater')}} -->
                      <div v-if="!Number.isNaN(craterForTransients.transient_size)">
+                        <h3>{{$t('calculator.results.crater.transient.Transient crater parameters')}}</h3>
+                        <div class="results_description" v-html="$t('calculator.results.crater.transient.description')"></div>
+
                         <div class="result_effect">
                             <span class="results_effects_name">{{$t('calculator.results.crater.transient.Transient crater size')}}:</span>
                             {{$format.dimension_prefix_format(craterForTransients.transient_size)}}<span v-html="$t('calculator.dimensions.m')"/>
@@ -21,6 +33,26 @@
                             {{$format.dimension_prefix_format(craterForTransients.transient_depth)}}<span v-html="$t('calculator.dimensions.m')"/>
                         </div>
 
+                     </div>
+                     <div v-if="!Number.isNaN(craterForTransients.final_size)">
+                        <h3>{{$t('calculator.results.crater.final.Final crater parameters')}}</h3>
+                        <div class="results_description" v-html="$t('calculator.results.crater.final.description')"></div>
+                        
+                        <div class="result_effect">
+                            <span class="results_effects_name">{{$t('calculator.results.crater.final.Crater type')}}:</span>
+                            {{$t('calculator.results.crater.final.' + 
+                        ['simple', 'complex']
+                            [craterForTransients.crater_type -1])}}
+                        </div>
+
+                        <div class="result_effect">
+                            <span class="results_effects_name">{{$t('calculator.results.crater.final.Final crater diameter')}}:</span>
+                            {{$format.dimension_prefix_format(craterForTransients.final_size)}}<span v-html="$t('calculator.dimensions.m')"/>
+                        </div>
+                        <div class="result_effect">
+                            <span class="results_effects_name">{{$t('calculator.results.crater.final.Depth of a final crater')}}:</span>
+                            {{$format.dimension_prefix_format(craterForTransients.final_depth)}}<span v-html="$t('calculator.dimensions.m')"/>
+                        </div>
                      </div>
                      <div v-if="Number.isNaN(craterForTransients.transient_size)">{{$t('calculator.results.crater.no crater')}}</div>
                 </div>

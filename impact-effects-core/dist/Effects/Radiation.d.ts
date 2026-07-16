@@ -1,0 +1,41 @@
+import { IPoint } from "../Geometry";
+import Variant from "../Variant";
+import { IEffectAssesment } from "./EffectsAssessment";
+export default class RadiationEffects implements IEffectAssesment {
+    calc_hrad_and_zero_point(variant: Variant): void;
+    calc_variant(variant: Variant): void;
+    calc_point(op: IPoint): void;
+    point_assesment: {
+        thermal_exposure: number;
+        thermal_flux: number;
+    };
+    hrad: number;
+    eta: number;
+    trad: number;
+    zero_point: number;
+    max_irradiation_energy: number;
+    max_irradiation_flux: number;
+    centered_irradiation_f: (op: IPoint) => number;
+    irradiation_f: (op: IPoint) => number;
+    centered_irradiation_flux_f: (op: IPoint) => number;
+    irradiation_flux_f: (op: IPoint) => number;
+    static hrad_small(variant: Variant): number;
+    static hrad_large(variant: Variant): number;
+    static hrad_calc(variant: Variant): number;
+    static trad_300(variant: Variant): number;
+    static trad_1000(variant: Variant): number;
+    static trad_small(variant: Variant): number;
+    static trad_calc(variant: Variant): number;
+    static eta_small_calc(variant: Variant): number;
+    static eta_large_calc(variant: Variant): number;
+    static eta_calc(variant: Variant): number;
+    static zero_point_small_calc(variant: Variant): number;
+    static zero_point_large_calc(variant: Variant): number;
+    static zero_point_calc(variant: Variant): number;
+    static max_irradiation_energy_calc(variant: Variant): number;
+    static max_irradiation_flux_calc(variant: Variant): number;
+    irradiation_small_calc(variant: Variant): (op: IPoint) => number;
+    irradiation_large_calc(variant: Variant): (op: IPoint) => number;
+    irradiation_calc(variant: Variant): (op: IPoint) => number;
+    irradiation_flux_calc(variant: Variant): (op: IPoint) => number;
+}

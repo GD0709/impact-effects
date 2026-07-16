@@ -66,23 +66,23 @@
   /> -->
 
     <yandex-map-marker v-model="entry_point_model" :settings="entry_point_controller.settings" style="width:0px;height:0px;">
-      <div class="marker"><div class="icon" v-html="entry_point_controller.icon"></div></div>
+      <div class="marker"><div class="icon" v1-html="entry_point_controller.icon">88</div></div>
     </yandex-map-marker>
 
     <yandex-map-marker v-model="intersection_point_model" :settings="intersection_point_controller.settings" style="width:0px;height:0px;">
-      <div class="marker"><div class="icon" v-html="intersection_point_controller.icon"></div></div>
+      <div class="marker"><div class="icon" v1-html="intersection_point_controller.icon">77</div></div>
     </yandex-map-marker>
 
     <yandex-map-marker v-model="observation_point_model" :settings="observation_point_controller.settings" style="width:0px;height:0px;">
-      <div class="marker"><div class="icon" v-html="observation_point_controller.icon"></div></div>
+      <div class="marker"><div class="icon" v1-html="observation_point_controller.icon">66</div></div>
     </yandex-map-marker>
 
 
     <yandex-map-marker v-model="max_overpressure_point_model" :settings="max_overpressure_point_controller.settings" style="width:0px;height:0px;">
-      <div class="marker"><div class="icon" v-html="max_overpressure_point_controller.icon"></div></div>
+      <div class="marker"><div class="icon" v1-html="max_overpressure_point_controller.icon">55</div></div>
     </yandex-map-marker>
     <yandex-map-marker v-model="max_thermal_effect_point_model" :settings="max_thermal_effect_point_controller.settings" style="width:0px;height:0px;">
-      <div class="marker"><div class="icon" v-html="max_thermal_effect_point_controller.icon"></div></div>
+      <div class="marker"><div class="icon" v1-html="max_thermal_effect_point_controller.icon">44</div></div>
     </yandex-map-marker>
 
     <yandex-map-listener
@@ -113,7 +113,7 @@
         <div class="legend_marker"><div class="icon" v-html="observation_point_controller.icon"></div></div><div class="legend_marker_title">{{$t('calculator.schema.Observation point')}}</div>
       </div>
     </div>
-    <!-- <div>location: {{ LOCATION }}</div> -->
+    <div>location: {{ LOCATION }}</div>
   </div>
 </div>
 </template>

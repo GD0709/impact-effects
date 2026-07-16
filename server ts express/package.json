@@ -1,0 +1,28 @@
+{
+  "name": "impact-effects-server",
+  "version": "1.0.0",
+  "description": "server side for impact effects calculator",
+  "license": "ISC",
+  "author": "Glazachev Dmitry",
+  "type": "commonjs",
+  "main": "dist/index.js",
+  "scripts": {
+    "build": "tsc",
+    "start": "node .",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "devDependencies": {
+    "typescript": "^5.9.3"
+  },
+  "dependencies": {
+    "@types/express": "^5.0.6",
+    "body-parser": "^2.2.1",
+    "class-transformer": "^0.5.1",
+    "class-validator": "^0.14.3",
+    "express": "^5.2.1",
+    "express-http-context": "^2.0.1",
+    "multer": "^2.0.2",
+    "reflect-metadata": "^0.2.2",
+    "routing-controllers": "^0.11.3"
+  }
+}

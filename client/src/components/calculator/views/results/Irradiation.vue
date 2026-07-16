@@ -6,6 +6,15 @@
 
             </template>
             <template v-slot:content>
+                
+                <div  v-if="state.visual_settings.is_debug">
+                    <div>
+                        <span class="input_parameter_name">irradiation: </span>
+                        <span class="input_parameter_value"><pre>{{ JSON.stringify(irradiation, null, 2) }}</pre></span>
+                    </div>
+                
+                </div>
+
                 <div class="results_description" v-html="$t('calculator.results.irradiation.description')"></div>
 
                 <div class="result_effect"  v-if="state.variant.diameter < 150">
@@ -38,7 +47,7 @@
                     <span class="results_effects_name">{{$t('calculator.results.irradiation.Radiation altitude')}}:</span>
                     {{$format.round(irradiation.hrad, null)}}  {{$t('calculator.dimensions.km')}}
                 </div> -->
-                <div class="result_effect"  v-if="state.variant.diameter < 150">
+                <div class="result_effect">
                     <help :help_title="$t('calculator.results.irradiation.info.Radiation altitude.header')">
                         <div>{{ $t('calculator.results.irradiation.info.Radiation altitude.body') }}</div>
                         <!-- <Publication :publication="publications[24]" :large="true" :links="true"
@@ -53,7 +62,7 @@
                     <span class="results_effects_name">{{$t('calculator.results.irradiation.Radiation pulse duration')}}:</span>
                     {{$format.round(irradiation.trad, null)}}  {{$t('calculator.dimensions.s')}}
                 </div> -->
-                <div class="result_effect"  v-if="state.variant.diameter < 150">
+                <div class="result_effect">
                     <help :help_title="$t('calculator.results.irradiation.info.Radiation pulse duration.header')">
                         <div>{{ $t('calculator.results.irradiation.info.Radiation pulse duration.body') }}</div>
                         <!-- <Publication :publication="publications[24]" :large="true" :links="true"
@@ -71,7 +80,7 @@
                     <span class="results_effects_name">{{$t('calculator.results.irradiation.Radiation efficiency')}}:</span>
                     {{$format.round(irradiation.eta, null)}}%
                 </div> -->
-                <div class="result_effect"  v-if="state.variant.diameter < 150">
+                <div class="result_effect">
                     <help :help_title="$t('calculator.results.irradiation.info.Radiation efficiency.header')">
                         <div>{{ $t('calculator.results.irradiation.info.Radiation efficiency.body') }}</div>
                         <!-- <Publication :publication="publications[24]" :large="true" :links="true"
@@ -88,7 +97,7 @@
                     <span class="results_effects_name">{{$t('calculator.results.irradiation.Distance to the center')}}:</span>
                     {{$format.round(irradiation.zero_point, null)}} {{$t('calculator.dimensions.km')}}
                 </div> -->
-                <div class="result_effect"  v-if="state.variant.diameter < 150">
+                <div class="result_effect">
                     <help :help_title="$t('calculator.results.irradiation.info.Distance to the center.header')">
                         <div>{{ $t('calculator.results.irradiation.info.Distance to the center.body') }}</div>
                         <!-- <Publication :publication="publications[24]" :large="true" :links="true"
@@ -106,7 +115,7 @@
                     <span class="results_effects_name">{{$t('calculator.results.irradiation.Thermal exposure in the point of observation')}}:</span>
                     {{$format.dimension_prefix_format(irradiation.point_assesment.thermal_exposure)}}<span v-html="$t('calculator.dimensions.J/cm2')"/>
                 </div> -->
-                <div class="result_effect"  v-if="state.variant.diameter < 150">
+                <div class="result_effect">
                     <help :help_title="$t('calculator.results.irradiation.info.Thermal exposure in the point of observation.header')">
                         <div>{{ $t('calculator.results.irradiation.info.Thermal exposure in the point of observation.body') }}</div>
                         <!-- <Publication :publication="publications[24]" :large="true" :links="true"
@@ -149,6 +158,17 @@ onMounted(() => {
         triggerRef(irradiation)
     })
 })
+
+let filters = {
+    pretty(value: any) {
+        return JSON.stringify(JSON.parse(value), null, 2);
+    }
+}
+function pretty(value: any) {
+    console.log(value)
+    return "hello"
+        //return JSON.stringify(JSON.parse(value), null, 2);
+    }
 </script>
 
 

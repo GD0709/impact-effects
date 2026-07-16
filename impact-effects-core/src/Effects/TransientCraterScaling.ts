@@ -1,4 +1,4 @@
-import MathExt from "../../lib/MathExt";
+import MathExt from "../lib/MathExt";
 import { IPoint } from "../Geometry";
 import Target from '../Target';
 import Variant from "../Variant";

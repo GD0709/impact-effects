@@ -1,5 +1,5 @@
 
-import { Emitter, type IEmitter, type INotifyChanged } from "../lib/Events";
+import { Emitter, type IEmitter, type INotifyChanged } from "./lib/Events";
 import LatLonEllipsoidal_Vincenty from 'geodesy/latlon-ellipsoidal-vincenty.js';
 
 declare class Test extends LatLonEllipsoidal_Vincenty{
