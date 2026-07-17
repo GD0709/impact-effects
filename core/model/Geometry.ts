@@ -161,8 +161,8 @@ class GeoMath{
         target_point: {latitude: number, longitude: number} //target point coordinates (radians)
     ): number {
 
-        const p1 = new Test(view_point.latitude, view_point.longitude);
-        const p2 = new Test(target_point.latitude, target_point.longitude, 0);
+        const p1 = new LatLonEllipsoidal_Vincenty(view_point.latitude, view_point.longitude);
+        const p2 = new LatLonEllipsoidal_Vincenty(target_point.latitude, target_point.longitude, 0);
         let dist2 = p1.distanceTo(p2);
         return dist2/1000;
     }
@@ -190,7 +190,7 @@ class GeoMath{
         bearing: number // azimuth from the view point to the target point (dec)
     ): {latitude: number, longitude: number}
     {
-        let p1 = new Test(view_point.latitude, view_point.longitude);
+        let p1 = new LatLonEllipsoidal_Vincenty(view_point.latitude, view_point.longitude);
         let p2 = p1.destinationPoint(distance, bearing);
         return {latitude: p2.latitude, longitude: p2.longitude};
     }
@@ -199,16 +199,16 @@ class GeoMath{
         view_point: {latitude: number, longitude: number}, //view point coordinates (dec)
         target_point: {latitude: number, longitude: number} 
     ): number {
-        let p1 = new Test(view_point.latitude, view_point.longitude);
-        let p2 = new Test(target_point.latitude, target_point.longitude);
+        let p1 = new LatLonEllipsoidal_Vincenty(view_point.latitude, view_point.longitude);
+        let p2 = new LatLonEllipsoidal_Vincenty(target_point.latitude, target_point.longitude);
         return p1.finalBearingTo(p2);
     }
     public static initial_bearing_to(
         view_point: {latitude: number, longitude: number}, //view point coordinates (dec)
         target_point: {latitude: number, longitude: number} 
     ): number {
-        let p1 = new Test(view_point.latitude, view_point.longitude);
-        let p2 = new Test(target_point.latitude, target_point.longitude);
+        let p1 = new LatLonEllipsoidal_Vincenty(view_point.latitude, view_point.longitude);
+        let p2 = new LatLonEllipsoidal_Vincenty(target_point.latitude, target_point.longitude);
         return p1.initialBearingTo(p2);
     }
     

@@ -21,6 +21,8 @@
     <yandex-map-zoom-control />
   </yandex-map-controls>
 
+
+
   <!-- <yandex-map-marker
             v-for="(marker, index) in markers3"
             :key="index"
@@ -28,15 +30,16 @@
 
     >
       <div class="marker"><div class="icon" v-html="marker.icon"></div></div>
-    </yandex-map-marker> -->
+    </yandex-map-marker>  -->
 
-    <!-- <yandex-map-default-marker
+    <!--<yandex-map-default-marker
             v-model="entry_point_marker"
             :settings="marker.settings"
 
     >
       <div class="marker"><div class="icon" v-html="marker.icon"></div></div>
-    </yandex-map-default-marker> -->
+    </yandex-map-default-marker>
+    -->
 
     <yandex-map-feature
     :settings="{
@@ -65,24 +68,29 @@
     
   /> -->
 
-    <yandex-map-marker v-model="entry_point_model" :settings="entry_point_controller.settings" style="width:0px;height:0px;">
-      <div class="marker"><div class="icon" v1-html="entry_point_controller.icon">88</div></div>
+    <yandex-map-marker v-model="entry_point_model" :settings="entry_point_controller.settings" style="width:0px;height:0px;"
+    class="marker_root">
+      <div class="marker"><div class="icon" v-html="entry_point_controller.icon"></div></div>
     </yandex-map-marker>
 
-    <yandex-map-marker v-model="intersection_point_model" :settings="intersection_point_controller.settings" style="width:0px;height:0px;">
-      <div class="marker"><div class="icon" v1-html="intersection_point_controller.icon">77</div></div>
+    <yandex-map-marker v-model="intersection_point_model" :settings="intersection_point_controller.settings" style="width:0px;height:0px;"
+    class="marker_root">
+      <div class="marker"><div class="icon" v-html="intersection_point_controller.icon"></div></div>
     </yandex-map-marker>
 
-    <yandex-map-marker v-model="observation_point_model" :settings="observation_point_controller.settings" style="width:0px;height:0px;">
-      <div class="marker"><div class="icon" v1-html="observation_point_controller.icon">66</div></div>
+    <yandex-map-marker v-model="observation_point_model" :settings="observation_point_controller.settings" style="width:0px;height:0px;"
+    class="marker_root">
+      <div class="marker"><div class="icon" v-html="observation_point_controller.icon"></div></div>
     </yandex-map-marker>
 
 
-    <yandex-map-marker v-model="max_overpressure_point_model" :settings="max_overpressure_point_controller.settings" style="width:0px;height:0px;">
-      <div class="marker"><div class="icon" v1-html="max_overpressure_point_controller.icon">55</div></div>
+    <yandex-map-marker v-model="max_overpressure_point_model" :settings="max_overpressure_point_controller.settings" style="width:0px;height:0px;"
+    class="marker_root">
+      <div class="marker"><div class="icon" v-html="max_overpressure_point_controller.icon"></div></div>
     </yandex-map-marker>
-    <yandex-map-marker v-model="max_thermal_effect_point_model" :settings="max_thermal_effect_point_controller.settings" style="width:0px;height:0px;">
-      <div class="marker"><div class="icon" v1-html="max_thermal_effect_point_controller.icon">44</div></div>
+    <yandex-map-marker v-model="max_thermal_effect_point_model" :settings="max_thermal_effect_point_controller.settings" style="width:0px;height:0px;"
+    class="marker_root">
+      <div class="marker"><div class="icon" v-html="max_thermal_effect_point_controller.icon"></div></div>
     </yandex-map-marker>
 
     <yandex-map-listener
@@ -175,8 +183,6 @@ const map_drag_event = (object: Parameters<BehaviorMapEventHandler>[0]) => {
 
 
 
-
-
 class MarkerModel {
     constructor(
         control: ShallowRef<any>,
@@ -249,13 +255,13 @@ const lineCoordinates = ref<LngLat[]>([
 ]);
 
 
-// const markers3:MarkerModel[] = [
-//     new MarkerModel("&#xe902;", "Entry point", state.value.entry_point_geo, null),
-//     //new MarkerModel("&#8736;","Surface intersection point", state.value.geo_points_controller.intersection_point_geo),
-//     // new MarkerModel("&#xe904;", "Effective thermal point source"),
-//     // new MarkerModel("&#xe9a9;",  "Effective overpressure point source"),
-//     new MarkerModel("?", "Observation point", state.value.observation_point_geo, (s, p)=> state.value.observation_point_geo.set(p.latitude, p.longitude, [])),
-// ]
+const markers3:MarkerModel[] = [
+    new MarkerModel(entry_point_model, "&#xe902;", "Entry point", state.value.entry_point_geo, null),
+    //new MarkerModel("&#8736;","Surface intersection point", state.value.geo_points_controller.intersection_point_geo),
+    // new MarkerModel("&#xe904;", "Effective thermal point source"),
+    // new MarkerModel("&#xe9a9;",  "Effective overpressure point source"),
+    new MarkerModel(observation_point_model, "?", "Observation point", state.value.observation_point_geo, (s, p)=> state.value.observation_point_geo.set(p.latitude, p.longitude, [])),
+]
 
 
 
@@ -395,6 +401,26 @@ const LOCATION: YMapLocationRequest = {
 
 
 <style scoped lang="scss">
+
+.markerTest {
+    position: relative;
+    width: 20px;
+    height: 20px;
+    background: #ff0000;
+    border-radius: 50%;
+    border: 2px solid #fff;
+    box-shadow: 0 0 5px rgba(0, 0, 0, 0.5);
+    text-align: center;
+    color: #fff;
+    font-weight: bold;
+    line-height: 20px;
+  }
+.ymaps3--marker{
+  &:hover {
+    z-index: 100;
+  }
+}
+
 .map_wrapper {
     display: flex;
     flex-direction: column;
@@ -442,6 +468,7 @@ const LOCATION: YMapLocationRequest = {
         .icon{
             color:rgb(255, 255, 255);
         }
+        z-index: 100;
     }
 }
 
