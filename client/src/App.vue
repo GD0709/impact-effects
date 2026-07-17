@@ -8,7 +8,7 @@
       <router-link class="header_link" to="/">
         <div class="flex_row_center_center align-center">
           <span class="icon ah-meteoroid logo"/>
-        <div class="app_bar_header">Impact Effects{{state.visual_settings.is_debug ? ' - Debug Mode' : ''}}</div>
+        <div class="app_bar_header">Impact Effects{{state.visual_settings.is_debug ? ' - Debug Mode. version: 2026.07.17.1' : ''}}</div>
         </div>
       </router-link>
 
